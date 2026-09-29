@@ -1,5 +1,16 @@
 # Soal3
 
+Untuk menambahkan resolver 192.168.122.1 ke semua node, masukkan dengan melalui config di setiap node nya.
+
+Contoh (delta):
+```bash
+auto eth0
+iface eth0 inet static
+        address 192.232.1.2
+        netmask 255.255.255.0
+        gateway 192.232.1.1
+up echo 'nameserver 192.168.122.1' > /etc/resolv.conf
+```
 
 
 ## Catatan
