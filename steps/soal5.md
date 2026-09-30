@@ -170,6 +170,6 @@ Setelah di save, kita cukup menjalankan kode berikut di dalam tedd untuk mengece
 ls -l /var/lib/bind/
 dig alpha.k42.com @127.0.0.1
 ```
-![alt text](/assets/5_verifikasitedd.png)
+![alt text](../assets/5_verifikasitedd.png)
 
 Disini terlihat bahwa status dari dig tersebut adalah `NOERROR` dan juga muncul ip dari alpha yang menandakan bahwa tedd berhasil mengikuti prab dan hasilnya terupdate. Dari sini juga terlihat bahwa domain dengan nama dari webnya juga berhasil di implementasi dilihat dari nama domainnya (untuk contoh ini alpha.k42.com) dan juga terlihat ip dari domainnya (yaitu 192.232.5.4)
