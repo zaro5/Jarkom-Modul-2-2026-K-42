@@ -2,7 +2,7 @@
 
 ## Jalankan script `obladi` dan `desmond`
 
-Buat file script `soal9_obladi.sh` dan berikan izin eksekusi, kemudian jalankan. Pastikan Apache2 berhaasil running
+Buat file script `soal9_obladi.sh` `soal9_desmond.sh` dan berikan izin eksekusi, kemudian jalankan. Pastikan Apache2 berhaasil running
 ![alt text](../assets/9_desmond-apache2-running.png)
 ![alt text](../assets/9_obladi-apache2-running.png)
 
