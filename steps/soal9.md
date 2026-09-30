@@ -8,11 +8,10 @@ Buat file script `soal9_obladi.sh` `soal9_desmond.sh` dan berikan izin eksekusi,
 
 ## Uji akses via Hostname
 
-Jalankan pengujian menggunakan `curl --resolve <domain>:80:<IP WEB SERVER> <domain>`
+Jalankan pengujian menggunakan `curl <domain>`, namun apabila node alpha belum terhubung dengan node `obladi`, maka bisa menggunakan `curl --resolve <domain>:80:<IP WEB SERVER> <domain>`
 
 ```bash
-curl --resolve vault.k42.com:80:192.232.3.5 http://vault.k42.com/arsip/
-# Gunakan IP Address dari OBLADI
+curl http://vault.k42.com/arsip/
 ```
 
-![alt text](../assets/9_beta-curl-success.png)
+![alt text](../assets/9_alpha-curl-success.png)

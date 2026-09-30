@@ -11,7 +11,6 @@ Pada container `prab`, buatlah `soal11_prab.sh` dan sesuaikan isinya dengan scri
 
 ![alt text](../assets/11_prab-reload.png)
 
-
 ## Konfigurasi nameserver
 
 Pada node `penny` dan `abbey`, tambahkan nameserver 192.232.3.7 dan nameserver 8.8.8.8 agar bisa melakukan uji coba di tahap selanjutnya.
@@ -35,7 +34,7 @@ Buka container `alpha` dan lakukan `dig vault.k42.com +short` dan `dig core.k42.
     ![alt text](../assets/11_alpha-dig-penny-abby.png)
 
 - Uji coba di `penny`
-Buka container `penny` dan pastikan apache2 sedang running. Kemudian jalankan `curl -v http://vault.k42.com/arsip/`. Jika sudah benar, maka outputnya adalahh isi dari file yang telah dibuat. 
+Buka container `penny` dan pastikan apache2 sedang running. Kemudian jalankan `curl -v http://vault.k42.com/arsip/`. Jika sudah benar, maka outputnya adalahh isi dari file yang telah dibuat.
 
     ![alt text](../assets/11_penny-curl-beranda.png)
 

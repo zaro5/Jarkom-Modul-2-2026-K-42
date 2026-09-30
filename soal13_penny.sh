@@ -47,6 +47,8 @@ EOF
 a2dissite 000-default.conf
 a2ensite k42.com.conf
 apache2ctl configtest
+service apache2 reload
 service apache2 restart
+service apache2 status
 
-echo "Konfigurasi Penny (Tahap 12 & 13) Berhasil Dijalankan!"
+echo "HELL YAEAH"

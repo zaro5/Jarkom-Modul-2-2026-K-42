@@ -13,7 +13,6 @@ Di dalam script untuk `oblada` dan `molly` terdapat pembuatan file `index.php` d
 
 Jalankan dengan perintah `curl <domain>`,  namun apabila node alpha belum terhubung dengan node `oblada`, maka bisa menggunakan `curl --resolve <domain>:80:<IP WEB SERVER> <domain>`.
 
-
 ```bash
 curl http://core.k42.com/
 curl http://core.k42.com/profil

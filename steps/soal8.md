@@ -1,9 +1,12 @@
 # Soal 8
+
 "Di prab (master) deklarasikan reverse zone untuk segmen jaringan  tempat abbey, penny, area vault, dan area core berada. Di tedd (slave) tarik reverse zone tersebut sebagai slave, isi PTR untuk keempat hostname itu agar pencarian balik IP address mengembalikan hostname yang benar, lalu pastikan query reverse untuk alamat abbey, penny, area vault, dan area core dijawab authoritative."
 
 ## Setup Prab
+
 Untuk memulai, kita pertama perlu untuk konfigurasi Prab terlebih dahulu. Pertama, kita perlu untuk mendeklarasikan reverse zonenya terlebih dahulu. Kita jalankan kode berikut.
-```
+
+```text
 cat > /etc/bind/named.conf.local <<'EOF'
 zone "k42.com" {
     type master;
@@ -40,7 +43,8 @@ EOF
 ```
 
 Lalu, kita perlu untuk membuat file zona dan kita isikan PTR.
-```
+
+```text
 cat > /etc/bind/jarkom/2.232.192.in-addr.arpa <<'EOF'
 $TTL    604800
 @       IN      SOA     prab.k42.com. root.k42.com. (
@@ -55,7 +59,8 @@ $TTL    604800
 2       IN      PTR     penny.k42.com.
 EOF
 ```
-```
+
+```text
 cat > /etc/bind/jarkom/3.232.192.in-addr.arpa <<'EOF'
 $TTL    604800
 @       IN      SOA     prab.k42.com. root.k42.com. (
@@ -73,7 +78,8 @@ $TTL    604800
 2       IN      PTR     core.k42.com.
 EOF
 ```
-```
+
+```text
 cat > /etc/bind/jarkom/3.232.192.in-addr.arpa <<'EOF'
 $TTL    604800
 @       IN      SOA     prab.k42.com. root.k42.com. (
@@ -91,7 +97,8 @@ $TTL    604800
 2       IN      PTR     core.k42.com.
 EOF
 ```
-```
+
+```text
 cat > /etc/bind/jarkom/4.232.192.in-addr.arpa <<'EOF'
 $TTL    604800
 @       IN      SOA     prab.k42.com. root.k42.com. (
@@ -108,7 +115,8 @@ EOF
 ```
 
 Setelah itu kita, mengecek dan restart.
-```
+
+```text
 named-checkzone 2.232.192.in-addr.arpa /etc/bind/jarkom/2.232.192.in-addr.arpa
 named-checkzone 3.232.192.in-addr.arpa /etc/bind/jarkom/3.232.192.in-addr.arpa
 named-checkzone 4.232.192.in-addr.arpa /etc/bind/jarkom/4.232.192.in-addr.arpa
@@ -119,13 +127,16 @@ dig -x 192.232.4.2 @127.0.0.1 +short
 dig -x 192.232.3.5 @127.0.0.1 +short
 dig -x 192.232.3.3 @127.0.0.1 +short
 ```
-![alt text](/assets/8_hasilprab.png)
+
+![alt text](../assets/8_hasilprab.png)
 
 Disini sudah terlihat bahwa setiap zona menjawab dengan OK dengan serial ..201, named-checkconf tidak mengeluarkan error, dan keempat query reversenya terjawab dengan benar.
 
 ## Setup Tedd
+
 Setelah selesai setup prab, kita setup dulu zona slavenya di dalam tedd. Kita jalankan berikut untuk menambahkannya.
-```
+
+```text
 cat >> /etc/bind/named.conf.local <<'EOF'
 
 zone "2.232.192.in-addr.arpa" {
@@ -149,16 +160,19 @@ EOF
 ```
 
 Setelah menjalankannya, kita mengecek dengan berikut.
-```
+
+```text
 named-checkconf
 service named restart
 sleep 5
 ls -l /var/lib/bind/
 ```
-![alt text](/assets/8_hasiltedd.png)
+
+![alt text](../assets/8_hasiltedd.png)
 
 Dan terakhir kita verifikasi authorative di tedd.
-```
+
+```text
 dig -x 192.232.2.2 @127.0.0.1
 dig -x 192.232.4.2 @127.0.0.1
 dig -x 192.232.3.5 @127.0.0.1
@@ -166,7 +180,8 @@ dig -x 192.232.3.3 @127.0.0.1
 ```
 
 Hasilnya akan terlihat seperti berikut.
-```
+
+```text
 root@tedd:~# dig -x 192.232.2.2 @127.0.0.1
 dig -x 192.232.4.2 @127.0.0.1
 dig -x 192.232.3.5 @127.0.0.1

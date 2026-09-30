@@ -25,7 +25,7 @@ getent hosts $(hostname)
 ```
 
 Jika berhasil, akan terlihat seperti berikut
-![alt text](/assets/5_alpha.png)
+![alt text](../assets/5_alpha.png)
 
 ## Setup node Rootkit
 ```

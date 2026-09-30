@@ -57,5 +57,5 @@ ip route show
 ip addr show eth0
 ```
 
-Kalau sudah, jalankan dengan memberi izin eksekusi pada file. 
+Kalau sudah, jalankan dengan memberi izin eksekusi pada file.
 Kemudian lakukan uji coba dengan `ping -c 3 8.8.8.8`.

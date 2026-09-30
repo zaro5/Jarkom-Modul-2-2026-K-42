@@ -6,8 +6,8 @@ apt install nginx -y
 cat << 'EOF' > /etc/nginx/sites-available/core-proxy.conf
 upstream corecluster {
     # Daftarkan node Oblada dan Molly
-    server <IP_OBLADA>;
-    server <IP_MOLLY>;
+    server 192.232.3.3;
+    server 192.232.3.2;
 }
 
 server {
