@@ -11,10 +11,12 @@ Buat file script `soal10_oblada.sh` `soal10_molly.sh` dan berikan izin eksekusi,
 
 Di dalam script untuk `oblada` dan `molly` terdapat pembuatan file `index.php` dan `profil.php`.
 
-Jalankan uji coba dengan perintah:
+Jalankan dengan perintah `curl <domain>`,  namun apabila node alpha belum terhubung dengan node `oblada`, maka bisa menggunakan `curl --resolve <domain>:80:<IP WEB SERVER> <domain>`.
+
 
 ```bash
-curl --resolve <domain>:80:<IP WEB SERVER> <domain>
+curl http://core.k42.com/
+curl http://core.k42.com/profil
 ```
 
 ![alt text](../assets/10_alpha-curl-beranda.png)
