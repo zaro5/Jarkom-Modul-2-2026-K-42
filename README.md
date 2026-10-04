@@ -10,6 +10,9 @@
 
 ## Soal 1
 
+Pada soal 1, penugasan berfokus pada pembuatan struktur dari GNS soal Modul 2 ini sendiri.
+![alt text](assets/1_topologi.png)
+
 ## Soal 2
 
 ###   Melakukan config pada rootkit
@@ -73,7 +76,7 @@ Kalau sudah, jalankan dengan memberi izin eksekusi pada file.
 Kemudian lakukan uji coba dengan `ping -c 3 8.8.8.8`.
 
 #### Catatan
-DIbawah ini merupakan IP Address daroi tiap *node*. 
+DIbawah ini merupakan IP Address dari tiap *node*. 
 
 - Switch 1
   > Rootkit: 192.232.1.1
@@ -123,7 +126,7 @@ iface eth0 inet static
 up echo 'nameserver 192.168.122.1' > /etc/resolv.conf
 ```
 
-## Catatan PENTING
+### Catatan PENTING
 
 Untuk node `alpha`, `beta`, nameserver harus memuat IP Address yang lainnya. Agar ketika melakukan uji coba di soal-soal berikutnya bisa dijalankan dengan baik.
 
@@ -160,7 +163,7 @@ service named restart
 service named status
 ```
 
-### Bukti Soal 7
+### Bukti
 
 - prab
 ![alt text](assets/4_bind9-prab.png)
@@ -378,8 +381,8 @@ dig @192.232.3.7 k42.com soa # Pada PRAB
 dig @192.232.3.6 k42.com soa # Pada TEDD
 ```
 
-![image](../assets/6_dig-prab.png)
-![alt text](../assets/6_dig-tedd.png)
+![image](assets/6_dig-prab.png)
+![alt text](assets/6_dig-tedd.png)
 
 Dari hasil pengecekan tersebut, dapat dilihat bahwa nilai serial SOA dari `tedd` dan `prab` adalah sama, yakni dengan nilai `2024100202`.
 
@@ -870,8 +873,8 @@ up echo -e 'nameserver 192.232.3.7\nnameserver 192.232.3.3\nnameserver 192.232.3
 
     Buka container `abbey` dan pastikan Nginx sedang berjalan. Kemudian jalankan `curl -v http://core.k42.com/` dan `curl -v http://core.k42.com/profil`.
 
-    ![alt text](../assets/11_abbey-curl-beranda.png)
-    ![alt text](../assets/11_abbey-curl-profil.png)
+    ![alt text](assets/11_abbey-curl-beranda.png)
+    ![alt text](assets/11_abbey-curl-profil.png)
 
 ## Soal 12
 
