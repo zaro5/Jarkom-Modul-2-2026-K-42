@@ -2,7 +2,7 @@
 
 ## Mengenai soal 16
 
-Soal 16 berfokus pada pengujian atau *stress test server* menggunakan perintah ab (ApacheBench) pada `www.k42.coom` dan `static.k42.com`.
+Soal 16 berfokus pada pengujian atau *stress test server* menggunakan perintah ab (ApacheBench) pada `www.k42.com` dan `static.k42.com`.
 
 ## Persiapan
 
@@ -11,7 +11,7 @@ Sebelum melakukan uji coba, pastikan Nginx running di `abbey` dan Apache2 runnin
 ![alt text](../assets/16_abbey-nginx-running.png)
 ![alt text](../assets/16_penny-apache2-running.png)
 
-Selain itu, pastikan pula container `alpha` sudah terinstal ApacheBench (ab).
+Selain itu, pastikan pula container `alpha` sudah terinstal ApacheBench (ab). Namun jika belum ter-install, cukup jalankan file `soal16_alpha.sh`.
 
 ![alt text](../assets/16_alpha-which-ab.png)
 

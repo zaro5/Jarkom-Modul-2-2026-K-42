@@ -29,17 +29,20 @@ up echo -e 'nameserver 192.232.3.7\nnameserver 192.232.3.3\nnameserver 192.232.3
 ## Uji Coba
 
 - Uji coba di `alpha`
-Buka container `alpha` dan lakukan `dig vault.k42.com +short` dan `dig core.k42.com +short`. Pastikan output yang diberikan adalah IP dari `abbey` dan `penny`.
+
+    Buka container `alpha` dan lakukan `dig vault.k42.com +short` dan `dig core.k42.com +short`. Pastikan output yang diberikan adalah IP dari `abbey` dan `penny`.
 
     ![alt text](../assets/11_alpha-dig-penny-abby.png)
 
 - Uji coba di `penny`
-Buka container `penny` dan pastikan apache2 sedang running. Kemudian jalankan `curl -v http://vault.k42.com/arsip/`. Jika sudah benar, maka outputnya adalahh isi dari file yang telah dibuat.
 
-    ![alt text](../assets/11_penny-curl-beranda.png)
+    Buka container `penny` dan pastikan apache2 sedang running. Kemudian jalankan `curl -v http://vault.k42.com/arsip/`. Jika sudah benar, maka outputnya adalahh isi dari file yang telah dibuat.
+
+      ![alt text](../assets/11_alpha-curl-beranda.png)
 
 - Uji coba di `abbey`
-Buka container `abbey` dan pastikan Nginx sedang berjalan. Kemudian jalankan `curl -v http://core.k42.com/` dan `curl -v http://core.k42.com/profil`.
+
+    Buka container `abbey` dan pastikan Nginx sedang berjalan. Kemudian jalankan `curl -v http://core.k42.com/` dan `curl -v http://core.k42.com/profil`.
 
     ![alt text](../assets/11_abbey-curl-beranda.png)
     ![alt text](../assets/11_abbey-curl-profil.png)

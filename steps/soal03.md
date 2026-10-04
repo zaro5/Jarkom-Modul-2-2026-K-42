@@ -21,7 +21,6 @@ Untuk node `alpha`, `beta`, nameserver harus memuat IP Address yang lainnya. Aga
 up echo -e 'nameserver 192.232.3.7\nnameserver 192.232.3.6\nnameserver 192.232.3.3\nnameserver 192.168.122.1' > /etc/resolv.conf
 ```
 
-
 ## Note
 
 - Switch 1

@@ -2,7 +2,7 @@
 
 ## Ubah SOA untuk container `prab`
 
-Ganti isi file `scriptPrab1.sh` dengan script dibawah ini:
+Buatlah file, dan ganti isi file `soal7.sh` dengan script dibawah ini:
 
 ```bash
 #!/bin/bash
@@ -75,7 +75,8 @@ static  IN  CNAME   abbey
 EOF
 
 # --- Bagian 4: Restart Layanan BIND9 ---
-systemctl restart bind9
+service named restart
+service named status
 echo "Konfigurasi DNS Master (Prab) Berhasil Dijalankan!"
 ```
 

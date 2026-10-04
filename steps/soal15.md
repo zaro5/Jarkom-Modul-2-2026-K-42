@@ -11,13 +11,13 @@ Buat file `soal15_penny.sh` dan `soal15_abbey.sh` di masing-masing container. Be
 
 Apabila pada container `abbey` dan `penny` tertera bahwa Apache2 dan Nginx telah running, bisa dilanjutkan dengan pengecekan Path `/eternal` di `penny` sebagai PHP Rendering, sementara lakukan pengecekan path `/orion` di `abbey` yang merupakan murni statis. 
 
-Pada container `penny`, jalankan `curl -i http://www.k42.com/eternal/` dengan harapan:
+Pada container `alpha`, jalankan `curl -i http://www.k42.com/eternal/` dengan harapan:
 
 1. Status HTTP = 200 OK
 2. Output text = `Eternal PHP Active on Penny!`
 3. Tidak terlihat kode `<?php ... ?>`
 
-Sementara itu pada container `abbey`, hasil yang diharapkan adalah:
+Selanjutnya di container yang sama, jalankan `curl -i http://static.k42.com/orion/ hasil yang diharapkan adalah:
 
 1. Status HTTP = 200 OK
 2. Output text = `<h1>Orion Static Page on Abbey</h1>`
@@ -28,3 +28,9 @@ Sementara itu pada container `abbey`, hasil yang diharapkan adalah:
 
 - Curl `/orion`
 ![alt text](../assets/15_alpha-curl-orion.png)
+
+### Catatan
+
+Apabila link dari `http://...` kurang, maka status HTTP akan mengeluarkan kode 301 (Moved Permanently).
+
+![alt text](../assets/15_alpha-301.png)

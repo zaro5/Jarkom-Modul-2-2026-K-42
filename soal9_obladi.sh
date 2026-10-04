@@ -28,6 +28,11 @@ a2ensite k42.conf
 #Non aktifkan halaman bawaan default Apache
 a2dissite 000-default.conf
 
+#Reload
+service apache2 reload
+echo "Jika sebelumnya belum run, memang akan FAILED."
+echo "Tidak apa-apa"
+
 #Restart web server Apachenya
 service apache2 restart
 

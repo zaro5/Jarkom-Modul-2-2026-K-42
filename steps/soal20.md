@@ -15,7 +15,7 @@ up ./(scriptnya).sh
 ```
 
 Setelah selesai, akan terlihat sebagai berikut.
-![alt text](/assets/20_prab.png)
-![alt text](/assets/20_penny.png)
+![alt text](../assets/20_prab.png)
+![alt text](../assets/20_penny.png)
 
 Dan seterusnya.
